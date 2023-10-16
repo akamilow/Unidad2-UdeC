@@ -22,6 +22,8 @@ public class Ejercicio1 {
         System.out.print("Ingrese el peso del deportista: ");
         peso = sc.nextDouble();
 
+        sc.close();
+
         if (edad > 15 && nacionalidad.equals("colombiano") && peso >= 60 && peso <= 90) {
             System.out.println("El deportista " + nombre + " es apto para ejercer el deporte.");
         } else {
