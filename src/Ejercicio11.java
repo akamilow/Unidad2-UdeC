@@ -3,6 +3,12 @@ Crear un algoritmo que muestre un menú como este:
 1) Salir
 2) Sumatorio
 3) Factorial
+
+Tras mostrar el menú, el algoritmo debe leer un número del 1 al tres si se elige 1, el programa acaba. 
+Si se elige 2 se calcula el sumatorio del número, si se elige 3 se calcula el factorial 
+(en ambos casos el algoritmo pedirá escribir el número sobre el que se calcula el sumatorio o el factorial). 
+Tras calcular el sumatorio o el factorial e indicar el resultado, el algoritmo volverá a mostrar el menú y 
+así sucesivamente.
 */
 
 import java.util.Scanner;
