@@ -21,7 +21,12 @@ public class Ejercicio12 {
         ArrayList<Integer> arrayNumInput = new ArrayList<Integer>();
 
         for (int i = 0; i < 4; i++) {
-            arrayGuess.add(random.nextInt(9) + 1);
+            Integer num = random.nextInt(9) + 1;
+            if (arrayGuess.contains(num)) {
+                i--;
+            } else {
+                arrayGuess.add(num);
+            }
         }
 
         for (int i = 0; i < 4; i++) {
@@ -30,14 +35,20 @@ public class Ejercicio12 {
         }
         input.close();
 
+        
+        System.out.println(arrayGuess);
+        System.out.println(arrayNumInput);
+        
+
         System.out.println("=========================");
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < arrayGuess.size(); i++) {
             if (arrayGuess.get(i) == arrayNumInput.get(i)) {
                 System.out.print(" Fija ");
-            } else {
+            } else if (arrayGuess.contains(arrayNumInput.get(i))) {
                 System.out.print(" Pica ");
+            } else {
+                System.out.print(" "+arrayNumInput.get(i)+" ");
             }
         }
     }
-    
 }
